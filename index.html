@@ -146,13 +146,17 @@
         <li>No acumulable con otras promociones</li>
     </ul>
 
-    <a 
-      class="cta whatsapp-btn"
-      href="https://wa.me/595982604264?text=Hola%2C%20tengo%20dudas%20sobre%20la%20oferta%20de%20Internet%20Hogar.%20%C2%BFMe%20pod%C3%A9s%20ayudar%3F"
-      target="_blank"
-    >
-        📲 Ante dudas o consultas, contactar por WhatsApp
-    </a>
+      <a 
+        class="cta whatsapp-btn"
+        href="https://wa.me/595982604264?text=Hola%2C%20tengo%20dudas%20sobre%20la%20oferta%20de%20Internet%20Hogar."
+        target="_blank"
+        onclick="gtag('event', 'click_whatsapp', {
+          'event_category': 'Contacto',
+          'event_label': 'Boton WhatsApp Coordinador'
+        });"
+      >
+      📲 Ante dudas o consultas, contactar por WhatsApp
+      </a>
 
     <div class="legal">
         Promoción válida únicamente para las ciudades mencionadas.
