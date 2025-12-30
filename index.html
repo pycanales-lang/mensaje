@@ -11,7 +11,7 @@
 </script>
 
 <meta charset="UTF-8">
-<title>Oferta Especial |Internet Hogar</title>
+<title>Oferta Especial | Internet Hogar</title>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <style>
@@ -20,6 +20,12 @@
         background: linear-gradient(135deg, #003366, #0055a5);
         margin: 0;
         padding: 20px;
+
+        /* Seguridad básica */
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        -ms-user-select: none;
+        user-select: none;
     }
 
     .container {
@@ -43,7 +49,6 @@
         color: rgba(0,0,0,0.05);
         white-space: nowrap;
         pointer-events: none;
-        user-select: none;
     }
 
     h1 {
@@ -74,15 +79,25 @@
         line-height: 1.6;
     }
 
-    .cta {
-        margin-top: 25px;
-        background: #003366;
+    /* BOTÓN WHATSAPP PREMIUM */
+    .cta.whatsapp-btn {
+        display: block;
+        margin-top: 30px;
+        background: linear-gradient(135deg, #25D366, #128C7E);
         color: #fff;
-        padding: 15px;
+        padding: 16px;
         text-align: center;
-        border-radius: 8px;
+        border-radius: 14px;
         font-size: 18px;
         font-weight: bold;
+        text-decoration: none;
+        box-shadow: 0 8px 20px rgba(37, 211, 102, 0.45);
+        transition: all 0.3s ease;
+    }
+
+    .cta.whatsapp-btn:hover {
+        background: linear-gradient(135deg, #1ebe5d, #0f6f5c);
+        transform: scale(1.04);
     }
 
     .legal {
@@ -97,37 +112,16 @@
         color: #999;
         text-align: center;
     }
-
-    /* Seguridad básica */
-    body {
-        -webkit-user-select: none;
-        -moz-user-select: none;
-        -ms-user-select: none;
-        user-select: none;
-    }
 </style>
 
 <script>
     // Bloquear clic derecho
     document.addEventListener('contextmenu', e => e.preventDefault());
 
-    // Detectar cambio de pestaña o app (blur)
+    // Detectar cambio de pestaña o app
     document.addEventListener('visibilitychange', () => {
-        if (document.hidden) {
-            document.body.style.filter = "blur(10px)";
-        } else {
-            document.body.style.filter = "none";
-        }
+        document.body.style.filter = document.hidden ? "blur(10px)" : "none";
     });
-.whatsapp-btn {
-    display: block;
-    text-decoration: none;
-}
-
-.whatsapp-btn:hover {
-    background: #004080;
-}
-  
 </script>
 
 </head>
@@ -154,7 +148,7 @@
 
     <a 
       class="cta whatsapp-btn"
-      href="https://wa.me/59598260426?text=Hola%2C%20tengo%20dudas%20sobre%20la%20oferta%20de%20Internet%20Hogar.%20%C2%BFMe%20pod%C3%A9s%20ayudar%3F"
+      href="https://wa.me/595982604264?text=Hola%2C%20tengo%20dudas%20sobre%20la%20oferta%20de%20Internet%20Hogar.%20%C2%BFMe%20pod%C3%A9s%20ayudar%3F"
       target="_blank"
     >
         📲 Ante dudas o consultas, contactar por WhatsApp
@@ -172,4 +166,3 @@
 
 </body>
 </html>
-
